@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>newProject</title>
+	<link rel="stylesheet" type="text/css" href="fontawesome-free-5.15.3-web/css/all.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" type="text/css" href="base.css">
+	<link rel="stylesheet" type="text/css" href="responsive.css">
+<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+	<script src="main.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="app">
+		<div class="header">
+			<div class="header__login">
+				<a href="#" class="header__login--log" onclick="toRegister()">Đăng ký</a>
+				<a href="#" class="header__login--log" onclick="toLogin()">Đăng nhập</a>
+			</div>
+			
+			<!-- header__top -->
+
+			<div class="grid">
+				<div class="header__top hide-on-mobile">
+					<div class="header__top-logo ">
+						<img src="images/logo_shopee.png" class="header__top-logo--img">
+					</div>
+					<div class="header__search">
+						<div class="header__search-input--wrap">
+							<input type="text" class="header__search-input" placeholder="Tìm kiếm sản phẩm">
+							<div class="header__search-history">
+								<h4 class="header__search-history--search">Lịch sử tìm kiếm</h4>
+								<ul class="header__search-history--list">
+									<li class="header__search-history--item">
+										<a class="history-item" href="">Dell lattitude</a>
+									</li>
+									<li class="header__search-history--item">
+										<a class="history-item" href="">Dell Vostro</a>
+									</li>
+								</ul>
+							</div>
+							<button class="header__search-btn">
+								SEARCH
+							</button>
+						</div>
+					</div>
+					<div class="header__top-info">
+						<div class="header__top-info--contact">
+							<i class="contact__logo-img fas fa-phone-alt"></i>
+							<div class="contact__info">
+								<p style="margin: auto">Liên hệ với chúng tôi</p>
+								<p class="phone__number">0981-577-536</p>
+							</div>
+						</div>
+						<div class="header__top-cart hide-on-mobile">
+							<i class="cart__logo-img fas fa-shopping-bag"></i>
+							<div class="header__cart-list ">
+								<img src="images/nocart.png" class="header__cart-nocart-img">
+								<p class="header__cart-nocart-warn">Hiện chưa có sản phẩm nào</p>
+							</div>
+							<div class="cart__info ">
+								<p style="margin: auto">Giỏ hàng của bạn</h5>
+								<p class="cart__number" >7 sản phẩm</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- header__top -->
+
+			</div>
+		
+				<!-- header__bot -->
+
+
+			<div class="header__bot">
+				<div class="grid">
+					<div class="navbar__menu">
+						<ul class="navbar__menu-left">
+							<li class="navbar__menu-list">
+								<i class="item-list fas fa-laptop"></i>
+								<a href="#" class="navbar__menu-item">Laptop</a>
+							</li>
+							<li class="navbar__menu-list">
+								<i class="item-list fas fa-tablet-alt"></i>
+								<a href="#" class="navbar__menu-item">Tablet</a>
+							</li>
+							<li class="navbar__menu-list">
+								<i class="item-list fas fa-mobile-alt"></i>
+								<a href="#" class="navbar__menu-item">Điện thoại</a>
+							</li>
+							<li class="navbar__menu-list">
+								<i class="item-list fas fa-headphones-alt"></i>
+								<a href="#" class="navbar__menu-item">Phụ kiện</a>
+							</li>						
+						</ul>
+						<ul class="navbar__menu-right">
+							<li class="navbar__menu-list">
+								<a href="#" class="navbar__menu-item">Hỗ trợ</a>
+							</li>
+							<li class="navbar__menu-list">
+								<a href="#" class="navbar__menu-item">Sửa chữa</a>
+							</li>
+							<li class="navbar__menu-list">
+								<a href="#" class="navbar__menu-item">Tin tức</a>
+							</li>
+							<li class="navbar__menu-list">
+								<a href="#" class="navbar__menu-item">Liên hệ</a>
+							</li>
+						</ul>
+					</div>
+					<div class="nav__menu-moblie" >
+						<button class="nav__menu-mobile--btn" onclick="openNav()">
+							<i style="color: white" class="fas fa-bars" ></i>
+						</button>
+					</div>
+					<div class="nav__overlay" onclick="closeNav(), toClose()"></div>
+					<nav class="nav__mobile">
+						<div class="nav__mobile-close">
+							<i class="fas fa-times" onclick="closeNav()"></i>
+						</div>
+						<li class="nav__mobile-list">
+							<a href="#" class="nav__mobile-item">Laptop</a>
+						</li>
+						<li class="nav__mobile-list">
+							<a href="#" class="nav__mobile-item">Điện thoại</a>
+						</li>
+						<li class="nav__mobile-list">
+							<a href="#" class="nav__mobile-item">Phụ kiện</a>
+						</li>
+						<li class="nav__mobile-list">
+							<a href="#" class="nav__mobile-item">Đăng nhập</a>
+						</li>
+						<li class="nav__mobile-list">
+							<a href="#" class="nav__mobile-item">Update...</a>
+						</li>
+					</nav>
+					
+				</div>
+				<i class="header__mobile-search fas fa-search"></i>
+
+			</div>
+		</div>
+		<div class="container">
+				<div class="grid">
+					<div class="grid__row">
+						<div class="grid__column-2">
+							<nav class="category">
+								<h3 class="category__heading">
+									<i class="item-list fas fa-laptop">
+									</i>
+									Laptop
+								</h3>
+								<ul class="category-list">
+									<li class="category-item category-item--active">
+										<a href="#" class="category-item__link">Dell Vostro</a>
+									</li>
+									<li class="category-item category-item--active">
+										<a href="#" class="category-item__link">Dell Lattitue</a>
+									</li>
+									<li class="category-item category-item--active">
+										<a href="#" class="category-item__link">Dell Insprison</a>
+									</li>
+									<li class="category-item category-item--active">
+										<a href="#" class="category-item__link">Dell 2hand</a>
+									</li>
+								</ul>
+							</nav>
+							<nav class="category">
+								<h3 class="category__heading">
+									<i class="item-list fas fa-mobile-alt">
+									</i>
+									Điện thoại
+								</h3>
+								<ul class="category-list">
+									<li class="category-item category-item--active">
+										<a href="#" class="category-item__link">IphoneXS max</a>
+									</li>
+									<li class="category-item category-item--active">
+										<a href="#" class="category-item__link">Iphone12 Pro</a>
+									</li>
+									<li class="category-item category-item--active">
+										<a href="#" class="category-item__link">SamSung Galaxy i</a>
+									</li>
+									<li class="category-item category-item--active">
+										<a href="#" class="category-item__link">Mobell</a>
+									</li>
+								</ul>
+							</nav>
+							<nav class="category">
+								<h3 class="category__heading">
+									<i class="item-list fas fa-headphones-alt">
+									</i>
+									Phụ kiện
+								</h3>
+								<ul class="category-list">
+									<li class="category-item category-item--active">
+										<a href="#" class="category-item__link">Ipod Pro</a>
+									</li>
+									<li class="category-item category-item--active">
+										<a href="#" class="category-item__link">Pin điện thoại</a>
+									</li>
+									<li class="category-item category-item--active">
+										<a href="#" class="category-item__link">Sạc điện thoại</a>
+									</li>
+									<li class="category-item category-item--active">
+										<a href="#" class="category-item__link">Ốp điện thoại</a>
+									</li>
+								</ul>
+							</nav>
+							<div class="slideshow-container hide-on-mobile hide-on-tablet">
+  								<div class="mySlides fade">
+    								<img src="images/laptopdell inspiron 7501.png" style="width:100%; height:200px">
+    								<div class="text">Inspriron giá rẻ như cho</div>
+  								</div>
+ 
+  								<div class="mySlides fade">
+   								 	<img src="images/macbookair.png" style="width:100%; height:200px ">
+    								<div class="text" style="color: white">Macbook hàng 2hand đang tặng miễn phí</div>
+ 								</div>
+ 
+  								<div class="mySlides fade">
+    								<img src="images/latitude3510.png" style="width:100%; height:200px">
+    								<div class="text">Lattitude giảm giá nhé!</div>
+  								</div>
+							</div>
+							<br>
+ 
+							<div style="text-align:center">
+  								<span class="dot" onclick="currentSlide(0)"></span> 
+ 								 <span class="dot" onclick="currentSlide(1)"></span> 
+  								<span class="dot" onclick="currentSlide(2)"></span> 
+							</div>														
+						</div>
+						<div class="grid__column-10">
+							<div class="home-product">
+								<div class="grid__row">
+									<div class="grid__column-2-4">
+										<div class="home-product__item">
+											<div class="home-product__item-img">
+												<img src="images/latitude3510.png" class="item-img">
+											</div>
+											<div class="home-product__item-info">
+												<a href="" class="home-product__item-info--title">
+													Laptop Latitude 3510 13'' 16GB/256GB 2021 - Chính hãng Dell Việt Nam
+												</a>
+												<span class="home-product__item-info--price">
+													<strong class="item-price-style">15.999.000đ</strong>
+													<strike>18.000.000đ </strike>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="grid__column-2-4">
+										<div class="home-product__item">
+											<div class="home-product__item-img">
+												<img src="images/latitude3510.png" class="item-img">
+											</div>
+											<div class="home-product__item-info">
+												<a href="" class="home-product__item-info--title">
+													Laptop Latitude 3510 13'' 16GB/256GB 2021 - Chính hãng Dell Việt Nam
+												</a>
+												<span class="home-product__item-info--price">
+													<strong class="item-price-style">15.999.000đ</strong>
+													<strike>18.000.000đ </strike>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="grid__column-2-4">
+										<div class="home-product__item">
+											<div class="home-product__item-img">
+												<img src="images/latitude3510.png" class="item-img">
+											</div>
+											<div class="home-product__item-info">
+												<a href="" class="home-product__item-info--title">
+													Laptop Latitude 3510 13'' 16GB/256GB 2021 - Chính hãng Dell Việt Nam
+												</a>
+												<span class="home-product__item-info--price">
+													<strong class="item-price-style">15.999.000đ</strong>
+													<strike>18.000.000đ </strike>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="grid__column-2-4">
+										<div class="home-product__item">
+											<div class="home-product__item-img">
+												<img src="images/latitude3510.png" class="item-img">
+											</div>
+											<div class="home-product__item-info">
+												<a href="" class="home-product__item-info--title">
+													Laptop Latitude 3510 13'' 16GB/256GB 2021 - Chính hãng Dell Việt Nam
+												</a>
+												<span class="home-product__item-info--price">
+													<strong class="item-price-style">15.999.000đ</strong>
+													<strike>18.000.000đ </strike>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="grid__column-2-4">
+										<div class="home-product__item">
+											<div class="home-product__item-img">
+												<img src="images/latitude3510.png" class="item-img">
+											</div>
+											<div class="home-product__item-info">
+												<a href="" class="home-product__item-info--title">
+													Laptop Latitude 3510 13'' 16GB/256GB 2021 - Chính hãng Dell Việt Nam
+												</a>
+												<span class="home-product__item-info--price">
+													<strong class="item-price-style">15.999.000đ</strong>
+													<strike>18.000.000đ </strike>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="grid__column-2-4">
+										<div class="home-product__item">
+											<div class="home-product__item-img">
+												<img src="images/latitude3510.png" class="item-img">
+											</div>
+											<div class="home-product__item-info">
+												<a href="" class="home-product__item-info--title">
+													Laptop Latitude 3510 13'' 16GB/256GB 2021 - Chính hãng Dell Việt Nam
+												</a>
+												<span class="home-product__item-info--price">
+													<strong class="item-price-style">15.999.000đ</strong>
+													<strike>18.000.000đ </strike>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="grid__column-2-4">
+										<div class="home-product__item">
+											<div class="home-product__item-img">
+												<img src="images/latitude3510.png" class="item-img">
+											</div>
+											<div class="home-product__item-info">
+												<a href="" class="home-product__item-info--title">
+													Laptop Latitude 3510 13'' 16GB/256GB 2021 - Chính hãng Dell Việt Nam
+												</a>
+												<span class="home-product__item-info--price">
+													<strong class="item-price-style">15.999.000đ</strong>
+													<strike>18.000.000đ </strike>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="grid__column-2-4">
+										<div class="home-product__item">
+											<div class="home-product__item-img">
+												<img src="images/latitude3510.png" class="item-img">
+											</div>
+											<div class="home-product__item-info">
+												<a href="" class="home-product__item-info--title">
+													Laptop Latitude 3510 13'' 16GB/256GB 2021 - Chính hãng Dell Việt Nam
+												</a>
+												<span class="home-product__item-info--price">
+													<strong class="item-price-style">15.999.000đ</strong>
+													<strike>18.000.000đ </strike>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="grid__column-2-4">
+										<div class="home-product__item">
+											<div class="home-product__item-img">
+												<img src="images/latitude3510.png" class="item-img">
+											</div>
+											<div class="home-product__item-info">
+												<a href="" class="home-product__item-info--title">
+													Laptop Latitude 3510 13'' 16GB/256GB 2021 - Chính hãng Dell Việt Nam
+												</a>
+												<span class="home-product__item-info--price">
+													<strong class="item-price-style">15.999.000đ</strong>
+													<strike>18.000.000đ </strike>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<ul class="pagination home-product__pagination">
+								<li class="pagination-item">
+									<a href="#" class="pagination-item_link">
+										<i class="pagination-item__icon fas fa-angle-left"></i>
+									</a>
+								</li>
+								<li class="pagination-item pagination-item--active">
+									<a href="#" class="pagination-item_link">1
+									</a>
+								</li>
+								<li class="pagination-item">
+									<a href="#" class="pagination-item_link">2
+									</a>
+								</li>
+								<li class="pagination-item">
+									<a href="#" class="pagination-item_link">3
+									</a>
+								</li>
+								<li class="pagination-item">
+									<a href="#" class="pagination-item_link">4
+									</a>
+								</li>
+								<li class="pagination-item">
+									<a href="#" class="pagination-item_link">5
+									</a>
+								</li>
+								<li class="pagination-item">
+									<a href="#" class="pagination-item_link">...
+									</a>
+								</li>
+								<li class="pagination-item">
+									<a href="#" class="pagination-item_link">12
+									</a>
+								</li>
+								<li class="pagination-item">
+									<a href="#" class="pagination-item_link">
+										<i class="pagination-item__icon fas fa-angle-right"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+		</div>
+		<div class="footer hide-on-mobile">
+			<div class="grid">
+				<div class="footer-bgc">
+					<div class="grid__row">
+					<div class="grid__column-2">
+						<div class="footer-aboutshop">
+							<img src="images/logo_shopee.png" class="footer-aboutshop__logo">
+							<p style="line-height: 1.2rem;">Hệ thống shop chuyên bán laptop, điện thoại, phụ kiện chính hãng giá rẻ
+							đã có từ những năm 1900, chất lượng dịch vụ tuyệt vời!</p>
+							<div class="footer-aboutshop__connect">
+								<i class="footer-aboutshop__icon fab fa-facebook"></i>
+								<i class="footer-aboutshop__icon fab fa-instagram"></i>
+								<i class="footer-aboutshop__icon fab fa-twitter"></i>
+							</div>
+						</div>
+					</div>
+					<div class="grid__column-2">
+						<div class="footer-ser">
+							<h3 class="footer__header">Hỗ trợ - Dịch vụ</h3>
+							<ul class="footer-ser__list">
+								<li class="footer-ser__link">
+									<a href="#" class="footer-ser__item">Mua hàng trả góp</a>
+								</li>
+								<li class="footer-ser__link">
+									<a href="#" class="footer-ser__item">Hướng dẫn đặt hàng thanh toán</a>
+								</li>
+								<li class="footer-ser__link">
+									<a href="#" class="footer-ser__item">Chính sách bảo hành</a>
+								</li>
+								<li class="footer-ser__link">
+									<a href="#" class="footer-ser__item">Câu hỏi thường gặp</a>
+								</li>
+								<li class="footer-ser__link">
+									<a href="#" class="footer-ser__item">Tra cứu đơn hàng</a>
+								</li>			
+							</ul>
+						</div>
+					</div>
+					<div class="grid__column-2">
+						<div class="footer-pay">
+							<h3 class="footer__header">Thanh toán miễn phí</h3>
+							<img src="images/pay.png" class="footer-pay__img">
+						</div>
+					</div>
+					<div class="grid__column-2">
+						<div class="footer-contact">
+							<h3 class="footer__header">Thông tin liên hệ</h3>
+							<ul class="footer-contact__list">
+								<li class="footer-contact__link">
+									<a href="#" class="footer-contact__item">Chăm sóc khách hàng</a>
+								</li>
+								<li class="footer-contact__link">
+									<a href="#" class="footer-contact__item">Hỗ trợ bảo hành</a>
+								</li>
+								<li class="footer-contact__link">
+									<a href="#" class="footer-contact__item">Hỗ trợ sửa chữa</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer-main">
+					<p>© 2020. CÔNG TY CỔ PHẦN XÂY DỰNG VÀ ĐẦU TƯ THƯƠNG MẠI VƯƠNG THANH. MST: 337799. (Đăng ký lần đầu: Ngày 17 tháng 07 năm 1999, Đăng ký thay đổi ngày 03/03/1999)</p>
+					<strong>GP số 426/GP-TTĐT do sở TTTT Hà Nội cấp ngày 01/01/2021</strong>
+					<p>Địa chỉ: 22 Thượng Đình, P.Thượng Đình, Q.Thanh Xuân, Hà Nội. Điện thoại: 0981.577.536.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container__login-page">				
+    	<form class="container__register-form">
+     		<input type="text" placeholder="Họ tên"/>
+      		<input type="password" placeholder="Mật khẩu"/>
+     		<input type="text" placeholder="Địa chỉ mail"/>
+     		<button class="container__register--btn">Đăng ký</button>
+     		<p class="message">Kiểm tra lại thông tin <a class="container__register-item" href="#"></a></p>
+   		</form>   				  		
+   		<form class="container__login-form">
+     		<input type="text" placeholder="Tài khoản"/>
+      		<input type="password" placeholder="Mật khẩu"/>
+     		<button class="container__register--btn" >Đăng nhập</button>
+    		<p class="message">Chưa có tài khoản? <a href="#" class="container__register-item" onclick="toChange()">Tạo tài khoản</a></p>
+  			</form> 
+		</div>
+	<script>
+      	//khai báo biến slideIndex đại diện cho slide hiện tại
+      	var slideIndex;
+      	// KHai bào hàm hiển thị slide
+      	function showSlides() {
+          	var i;
+          	var slides = document.getElementsByClassName("mySlides");
+         	var dots = document.getElementsByClassName("dot");
+          	for (i = 0; i < slides.length; i++) {
+             	slides[i].style.display = "none";  
+          	}
+          	for (i = 0; i < dots.length; i++) {
+              	dots[i].className = dots[i].className.replace(" active", "");
+          	}
+
+          	slides[slideIndex].style.display = "block";  
+          	dots[slideIndex].className += " active";
+          	//chuyển đến slide tiếp theo
+          		slideIndex++;
+          	//nếu đang ở slide cuối cùng thì chuyển về slide đầu
+          	if (slideIndex > slides.length - 1) {
+            	slideIndex = 0
+          	}    
+          	//tự động chuyển đổi slide sau 5s
+          	setTimeout(showSlides, 4000);
+      	}
+      	//mặc định hiển thị slide đầu tiên 
+      	showSlides(slideIndex = 0);
+
+
+      	function currentSlide(n) {
+        	showSlides(slideIndex = n);
+      	}
+    </script>
+</body>
+</html>
